@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreeperCastle | Verifying...</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      background-color: #05070b;
+      color: #d6fcd4;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 320px;
+      margin-bottom: 35px;
+      animation: logoGlow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      from { filter: drop-shadow(0 0 10px #00ff99); }
+      to { filter: drop-shadow(0 0 25px #00ffcc); }
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: #00ff99;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: #a2d8a9;
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .verify-box {
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid rgba(0, 255, 153, 0.25);
+      border-radius: 18px;
+      padding: 30px 45px;
+      box-shadow: 0 0 35px rgba(0, 255, 153, 0.15);
+      backdrop-filter: blur(10px);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* The spinner is visible before Cloudflare inserts its challenge box */
+    .spinner {
+      border: 4px solid rgba(0, 255, 153, 0.2);
+      border-top: 4px solid #00ff99;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 15px;
+      animation: spin 1.4s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .cf-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    .cf-logo img {
+      width: 80px;
+      opacity: 0.8;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="CreeperCastle Logo" class="logo" />
+
+  <h1>Verifying...</h1>
+  <p>Please complete the challenge to proceed to CreeperCastle.cloud</p>
+
+  <div class="verify-box">
+    <div class="spinner"></div>
+
+    <!-- Cloudflare will replace this token with the CAPTCHA / JS challenge -->
+    ::CAPTCHA_BOX::
+
+    <div class="cf-logo">
+      <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" alt="Cloudflare" />
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by <a href="https://creepercastle.cloud" target="_blank">CreeperCastle.cloud</a> | Protected by Cloudflare
+  </div>
+</body>
+</html>
